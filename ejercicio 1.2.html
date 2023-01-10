@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio 1.2</title>
+    <script>
+        function calcularFarenheit(){
+        var grados= parseInt(document.getElementById("grado").value);
+        var total= 1.8*grados+ 32
+        document.getElementById("sol").innerHTML= "total: "+total+" grados Farenheit.";
+        console.log("total: "+ total + " grados Farenheit.");
+        }
+        function calcularCentigrados(){
+        var Farenheit= parseInt(document.getElementById("Farenheit").value);
+        var total= Farenheit/1.8 - 32
+        document.getElementById("sol").innerHTML= "total: "+total+" grados centígrados.";
+        console.log("total: "+ total + " grados centígrados.");
+        }
+    </script>
+</head>
+<body>
+    <h1>Ejercicio 1</h1>
+    <div id="menu">
+        <label for="grado">Grado Centígrados:</label><input type="number" id="grado">
+        <br>
+        <label for="Farenheit">Farenheit:</label><input type="number" id="Farenheit">
+        <br>
+        <input type="button" onclick="calcularFarenheit()" value="Farenheit">
+        <input type="button" onclick="calcularCentigrados()" value="Centígrados">
+    </div>
+        <span id="sol"></span>
+</body>
+</html>
