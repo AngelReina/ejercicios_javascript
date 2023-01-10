@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio 2.2</title>
+    <style>
+        h1{
+            color: red;
+        }
+        #salida{
+            color: blue;
+        }
+    </style>
+</head>
+<body>
+    <script>
+        function compruebaredad(){
+            var edad = document.getElementById("edad").value;
+            if (edad>=6 && edad<=7){
+                console.log("BENJAMÍN");
+                document.getElementById("salida").innerHTML= "<h2> BENJAMÍN</h2>"
+            }else if(8<=edad && edad<=9){
+                console.log("ALEVÍN");
+                document.getElementById("salida").innerHTML= "<h2> ALEVÍN</h2>"
+            }else if(10<=edad && edad<=11){
+                console.log("INFANTIL");
+                document.getElementById("salida").innerHTML= "<h2> INFANTIL</h2>"
+            }else if(edad>=12){
+                console.log("CADETE");
+                document.getElementById("salida").innerHTML= "<h2> CADETE</h2>"
+            }else{
+                console.log("No tiene ninguna categoría");
+                document.getElementById("salida").innerHTML= "<h2> No tiene ninguna categoría</h2>"
+            }
+        } 
+    </script>
+    <h1>Categorías Deportivas </h1>
+    <label for="edad"></label>Edad:<input type="number" id="edad"><br>
+    <input type="button" value="Enviar" onclick="compruebaredad()">
+    <span id="salida"></span>
+</body>
+</html>
