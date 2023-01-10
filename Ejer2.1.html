@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio 2.1</title>
+</head>
+<body>
+    <script>
+        function compruebatemperatura(){
+            var temperatura = document.getElementById("temp").value;
+            if (temperatura<0){
+                console.log("Es hielo");
+                document.getElementById("salida").innerHTML= "<h2> Hielo</h2>"
+            }else if(temperatura<100){
+                console.log("Es líquido");
+                document.getElementById("salida").innerHTML= "<h2> Líquido</h2>"
+            }else{
+                console.log("Es gas");
+                document.getElementById("salida").innerHTML= "<h2> Gas</h2>"
+            }
+        } 
+    </script>
+    <h1>Estado del agua</h1>
+    <label for="temperatura"></label>Temperatura:<input type="number" id="temp"><br>
+    <input type="button" value="Enviar" onclick="compruebatemperatura()">
+    <span id="salida"></span>
+</body>
+</html> 
