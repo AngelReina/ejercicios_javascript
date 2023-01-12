@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio 3.1</title>
+    <style>
+        h1{
+            color: blue;
+        }
+        #salida{
+            color: red;
+        }
+    </style>
+</head>
+<body>
+    <script>
+        function tabla(){
+            var num = document.getElementById("numero").value;
+            for(var i=0;i<=10;i++){
+                var total= num*i
+                document.getElementById("salida").innerHTML+=  num+"x"+i+"="+total+"<br>";
+                console.log(num+"x"+i+"="+total);
+ 
+            }
+        }
+    </script>
+    <h1>Tablas de multiplicar </h1>
+    <label for="numero"></label>Número de la tabla:<input type="number" id="numero"><br>
+    <input type="button" value="Calcular" onclick="tabla()">
+    <br>
+    <span id="salida"></span>
+    
+</body>
+</html>
