@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio 3.2</title>
+    <style>
+    h1{
+        color: orange;
+    }
+    #salida{
+        color: purple;
+    }
+</style>
+</head>
+<body>
+    <script>
+        function multiplosdetres(){
+            var num = document.getElementById("numero").value;
+            var total=0
+            for(var i=1;i<=num;i++){
+                if(i%3==0){
+                    total= total+1
+                    alert(total)
+                }
+            }
+        document.getElementById("salida").innerHTML="El numero total de multiplos de tres que hay entre la unidad y "+num+" es: "+total;
+        console.log("El numero total de multiplos de tres que hay entre la unidad y "+num+" es: "+total);
+        }
+    </script>
+    <h1>Multiplos de tres </h1>
+    <label for="numero"></label>Número:<input type="number" id="numero"><br>
+    <input type="button" value="Calcular" onclick="multiplosdetres()">
+    <br>
+    <span id="salida"></span>
+</body>
+</html>
