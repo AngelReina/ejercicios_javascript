@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        var index = 0;
+        var juegos=[
+            {name:"IEG Llamarada", age:"2015", type:"Deportivo"},
+            {name:"The Last of Us", age:"2013", type:"Aventura"},
+            {name:"Fifa 19", age:"2019", type:"Deportivo"},
+            {name:"Valorant", age:"2020", type:"Shooter"}
+        ]
+        function mostrar(i){
+            document.getElementById("name").innerHTML= juegos[i]["name"];
+            document.getElementById("age").innerHTML= juegos[i]["age"];
+            document.getElementById("type").innerHTML= juegos[i]["type"];
+
+        }
+        function siguiente(){
+            index= index+1;
+            mostrar(index);
+            
+            console.log("index:"+index);
+            if(index==juegos.length-1){
+                index=-1;
+            }
+            
+        }
+    </script>
+    <h1>Juegos</h1>
+    <label for="name">Nombre: </label><span id="name"></span><br>
+    <label for="age">Año: </label><span id="age"></span><br>
+    <label for="type">Tipo: </label><span id="type"></span><br>
+    <input type="button" value="siguiente" onclick="siguiente()">
+
+    <script>
+        mostrar(0);
+    </script>
+</body>
+</html>
